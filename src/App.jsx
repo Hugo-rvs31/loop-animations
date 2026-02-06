@@ -6,6 +6,8 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="balls-circle" element={<BallsCircle />} />
+      <Route path="*" element={<Home />} />
     </Routes>
   );
 }
