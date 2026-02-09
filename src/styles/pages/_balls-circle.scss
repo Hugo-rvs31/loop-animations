@@ -1,27 +1,35 @@
 .balls-page {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
+  background: #111827;
+  display: flex;
+  flex-direction: column;
 }
 
-.balls-container {
-  width: 100vw;
-  height: 100vh;
-  background: #0b0e18;
+.canvas-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 👉 remplace canvas par le faux canvas DOM */
+canvas {
+  border: 1px solid black;
   position: relative;
+  width: 600px;
+  height: 300px;
+  background: #111827;
+  border-radius: 12px;
   overflow: hidden;
+  box-shadow: 0 0 25px rgba(125, 211, 252, 0.3);
 }
 
+/* 👉 style des balles */
 .ball {
   position: absolute;
   border-radius: 50%;
-  background: linear-gradient(135deg, #7dd3fc, #a78bfa);
-}
+  background: #7dd3fc;
+  box-shadow: 0 0 8px rgba(125, 211, 252, 0.8);
 
-.structure {
-  position: absolute;
-  border-radius: 50%;
-  border: 4px solid rgba(255, 255, 255, 0.3);
-  border-top: 4px solid transparent; // 👈 ouverture
-  pointer-events: none;
+  background: radial-gradient(circle, #e0f2fe, #7dd3fc);
 }
